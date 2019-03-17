@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users":[
+    {
+      "customerId": 1,
+      "customerName": "jaya",
+      "avaialbeAmount": 5645
+    },
+    {
+      "customerId": 2,
+      "customerName": "Shiva",
+      "avaialbeAmount": 5645
+    }
+  ],
+    "spendingCategory":[
+      {"spendCategoryId":1,"spendCategoryName":"Medical"},
+      {"spendCategoryId":2,"spendCategoryName":"Travel"},
+      {"spendCategoryId":3,"spendCategoryName":"Loans"},
+      {"spendCategoryId":4,"spendCategoryName":"Utility Bills"},
+      {"spendCategoryId":5,"spendCategoryName":"Education"},
+      {"spendCategoryId":6,"spendCategoryName":"Shopping"},
+      {"spendCategoryId":7,"spendCategoryName":"Misc"}
+    ],
+  "profile": {
+    "name": "typicode"
+  }
+}

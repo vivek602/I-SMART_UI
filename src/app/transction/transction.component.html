@@ -1,0 +1,108 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <form class="form-horizontal" role="form" [formGroup]="transactioForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      <legend>Transaction Form</legend>
+    </div>
+
+    <!-- customer Id -->
+    <div class="form-group">
+        <label for="input" class="col-sm-3 control-label">Select Cutomer Id:</label>
+        <div class="col-sm-8">
+          <select name="" id="input"  class="form-control" formControlName="customerId" >
+            <option [value]="cust.customerId" *ngFor="let cust of allCustomer">{{cust.customerName}}</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- cust name  -->
+      <!-- <div class="form-group">
+        <label for="inputCustomerName" class="col-sm-3 control-label">CustomerName:</label>
+        <div class="col-sm-8">
+          <input disabled class="form-control" value="" required="required" formControlName="customerName">
+        </div>
+      </div> -->
+
+      <!-- available asmount  -->
+      <!-- <div class="form-group">
+        <label for="inputCustomerName" class="col-sm-3 control-label">Avaialbe Amount:</label>
+        <div class="col-sm-8">
+          <input disabled class="form-control" value="" required="required" formControlName="availAmt">
+        </div>
+      </div> -->
+
+
+
+    <!-- date -->
+    <div class="form-group">
+      <label for="input" class="col-sm-3 control-label">Choose date:</label>
+      <div class="col-sm-8">
+        <input type="date" name="" id="input" class="form-control" value="" required="required" formControlName="tranDate">
+      </div>
+    </div>
+
+    <!-- enter amout to transacrt  -->
+
+    <div class="form-group">
+      <label for="inputEnterAmount" class="col-sm-3 control-label">Enter Amount:</label>
+      <div class="col-sm-8">
+        <input type="number" name="EnterAmount" id="inputEnterAmount" class="form-control" required="required"
+          formControlName="tranAmt">
+      </div>
+    </div>
+
+    <!-- description -->
+    <div class="form-group">
+      <label for="inputDescription" class="col-sm-3 control-label">Description:</label>
+      <div class="col-sm-8">
+        <input type="text" name="Description" id="inputDescription" class="form-control" value="" formControlName="transDesc">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="inputEnterAmount" class="col-sm-3 control-label">Transaction Type:</label>
+      <div class="col-sm-8">
+
+        <div class="radio" >
+          <label>
+            <input type="radio" formControlName="pamentType" value="Dr" checked="checked" >
+            Deposit
+          </label>
+          <label>
+            <input type="radio" formControlName="pamentType" value="Cr"  >
+            Withdraw
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="input" class="col-sm-3 control-label">Spend CategoryId :</label>
+      <div class="col-sm-8">
+        <select name="" id="input" class="form-control" formControlName="spendCategoryId" >
+
+          <option [value]="cat.spendCategoryId" *ngFor="let cat of spendingCategory">{{cat.spendCategoryName}}</option>
+
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- <p>Form value: {{ transactioForm.value | json }}</p> -->
+
+</div>
+<!-- {{spendingCategory | json}} -->
+<!-- {{allCustomer | json }} -->
+
+<!--
+{{selectedStatusId}}
+{{response}} -->
